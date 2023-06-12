@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    {{#each registros}}
+    <div class="col-md-4">
+      <div class="card">
+        <input type="hidden" value="{{id}}" name="id">
+        <img src="{{imagen_url}}" class="card-img-top" alt="{{nombre}}">
+        <div class="card-body">
+          <h5 class="card-title">{{nombre}}</h5>
+          <p class="card-text">Precio: ${{precio}}</p>
+<p>
+          <a href="/tasks/edit/{{id}}" class="btn btn-primary">Editar</a>
+          <br>
+          </p>
+          <p>
+          <form action="/tasks/delete" method="POST" class="mx-2">
+            <input type="hidden" value="{{id}}" name="id">
+            <button class="btn btn-primary" type="submit">Eliminar</button>
+          </form>
+          </p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

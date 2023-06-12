@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    {{#each registros}}
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{imagen_url}}" class="card-img-top" style="width: 350px; heigth: 200px;" alt="{{nombre}}">
+          <div class="card-body">
+            <h5 class="card-title">{{nombre}}</h5>
+            <p class="card-text">Precio: ${{precio}}</p>
+            <button class="btn btn-primary" style="background-color: #051922;">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
